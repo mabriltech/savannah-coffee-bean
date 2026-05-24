@@ -1,0 +1,57 @@
+/* Responsive styles — mobile first refinements */
+
+@media (max-width:1080px){
+  .features-grid,.collection-grid,.varieties-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .philosophy-grid{grid-template-columns:repeat(2,1fr)}
+  .values-row{grid-template-columns:repeat(2,1fr);gap:40px}
+  .masonry{column-count:2}
+}
+
+@media (max-width:880px){
+  .nav-links,.nav-cta{display:none}
+  .nav-toggle{display:block}
+  .site-header nav.open .nav-links{
+    display:flex;flex-direction:column;
+    position:fixed;top:0;right:0;bottom:0;left:0;
+    background:var(--cream);
+    padding:120px 40px 40px;
+    gap:24px;
+    align-items:flex-start;
+    z-index:105;
+  }
+  .site-header nav.open .nav-links a{color:var(--coffee-dark);font-size:1.4rem;font-family:var(--serif);letter-spacing:.04em;text-transform:none}
+  .site-header nav.open .nav-cta{display:inline-block;color:var(--coffee-dark);border-color:var(--coffee-dark);margin-top:20px}
+
+  .intro-grid,.story-grid,.network-grid,.founder-grid,.contact-grid{grid-template-columns:1fr;gap:50px}
+  .story-stats{grid-template-columns:repeat(3,1fr);gap:18px}
+  .stat .n{font-size:1.7rem}
+  .intro-badge{left:20px;bottom:-20px;padding:20px 24px}
+  .founder-img::after{display:none}
+
+  .hero-inner{padding:120px 0 100px}
+  .hero-meta{display:none}
+  .hero-ctas{flex-direction:column;align-items:flex-start}
+  .hero-ctas .btn{width:auto}
+
+  section{padding:70px 0}
+  .mission{padding:90px 0}
+  .mission::before,.mission::after{font-size:8rem}
+  .cta-final{background-attachment:scroll;padding:90px 0}
+
+  .form-row{grid-template-columns:1fr}
+  .contact-form{padding:36px 26px}
+}
+
+@media (max-width:560px){
+  .features-grid,.collection-grid,.varieties-grid,.philosophy-grid,.values-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr;gap:40px}
+  .masonry{column-count:1}
+  .container{padding:0 22px}
+  .brand-tag{display:none}
+  .marquee-item{font-size:1.15rem}
+  .marquee-track{gap:48px}
+  .lightbox-prev{left:14px}
+  .lightbox-next{right:14px}
+  .lightbox-close{top:18px;right:18px}
+}
